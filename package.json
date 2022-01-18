@@ -1,0 +1,10 @@
+{
+  "name": "diel-sync-interface",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "types": "./dist/index.d.ts"
+}
