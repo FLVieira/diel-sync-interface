@@ -15,4 +15,3 @@ export interface Environment {
   areaInSquareMeters: string;
   environmentImages: Image[];
 }
-

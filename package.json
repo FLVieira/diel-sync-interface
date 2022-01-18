@@ -1,10 +1,27 @@
 {
   "name": "diel-sync-interface",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A nice greeter",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "keywords": [],
-  "author": "",
+  "author": "Fábio Luiz Vieira Filho",
   "license": "ISC",
-  "types": "./dist/index.d.ts"
+  "files": ["lib/**/*"],
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "devDependencies": {
+    "prettier": "^2.5.1",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.5.4"
+  }
 }
