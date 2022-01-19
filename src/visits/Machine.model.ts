@@ -1,18 +1,23 @@
 import { Image } from './Image.model';
+import { Option } from './Option.model';
 
 export interface Machine {
   id: string;
   context: string;
   tag: string;
-  name: string;
-  location: string;
   type: string;
-  evaporatorsCount: string;
-  shouldEvaporatorsWorkFullTime: string;
-  controllerTime: string;
-  minTemperature: string;
-  maxTemperature: string;
-  areaInSquareMeters: string;
+  model: string;
+  brand: string;
+  cycles: string;
+  frigoCapacity: string;
+  unit: string;
+  ratedPower: string;
+  tension: string;
+  fluid: string;
+  valve: string;
+  associatedMachines: Option[];
+  associatedEnvs: Option[];
+  associatedEnvsLocalization: Option[];
   evaporatorPlateImages: Image[];
   condenserPlateImages: Image[];
   environmentCondenserImages: Image[];

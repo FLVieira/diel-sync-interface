@@ -1,3 +1,13 @@
+export type VisitStatus = 1 | 2 | 3 | 4 | 5 | 6;
+
+export type VisitTextStatus =
+  | 'Agendado'
+  | 'Em Andamento'
+  | 'Aguardando Aprovação'
+  | 'Finalizado'
+  | 'Reagendado'
+  | 'Reagendadamento Solicitado';
+
 export interface Visit {
   s_id: number;
   client_id: number;
@@ -23,7 +33,8 @@ export interface Visit {
   tecnico_nome: string;
   tecnico_phone: string;
   cidade_tecnico: string;
-  status_id: number;
-  status: string;
+  status_id: VisitStatus;
+  status: VisitTextStatus;
   data: string;
 }
+
